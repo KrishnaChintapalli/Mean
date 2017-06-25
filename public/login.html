@@ -1,0 +1,20 @@
+
+<div class="container center_div">
+    <form ng-submit="login()">
+        <header class="formheader"><h4><b>Login</b></h4></header>
+        <div class="form-group col-sm-10">
+            <label>Username</label>
+            <input type="text" ng-model="user.userName"  placeholder="User Name" class="form-control"/>
+        </div>
+        <div class="form-group col-sm-10"> 
+            <label>Password</label>
+            <input type="password" ng-model="user.password"  placeholder="Password" class="form-control"/><br/>
+        </div>
+        <div class="checkbox col-sm-10 form-group">
+            <label><input type="checkbox" ng-model="remember"> Remember me</label>
+        </div>
+        <div class="form-group col-sm-10">
+            <input type="submit"  value=" Log In" class="btn btn-primary"/>
+        </div>
+    </form>
+</div>

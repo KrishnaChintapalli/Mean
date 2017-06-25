@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> Mean </title>
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/style.css">
+
+    </head>
+    <body ng-app="myApp" ng-init="isLogin=false">
+        <div class="container">
+            <nav class=" navbar  navbar-default navbar-fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#/"> MEAN APP</a>
+                    <p class="navbar-right navbar-text" ng-hide="isLogin"> <button class="btn btn-info"><a href="#/login">Login</a></button> <button class="btn btn-info"><a href="#/register">Register</a></button> </p>
+                    <ul class="navbar navbar-nav navbar-right nav" ng-show="isLogin">
+                        <li class="active"><a href="#/home">Home</a></li>
+                        <li><a href="#/profile">Profile</a></li>
+                        <li><a href="#/message">Messages</a></li>
+                        <p class="navbar-right navbar-text" ng-show="isLogin" >
+                            <button class="btn btn-info" ng-click="logOut()">Logout</button>
+                        </p>
+                    </ul>
+
+                </div> 
+            </nav>
+        </div> 
+        <div id="divtest" ng-view> </div>
+    </body>
+</html>
